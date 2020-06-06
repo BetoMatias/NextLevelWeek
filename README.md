@@ -17,5 +17,3 @@ Projeto desenvolvido durante a Next Level Week (01/06/20 ~ 07/06/20)
 
 - Cadastro de pontos de coleta
 - Busca do estado e cidade via API do IBGE 
-
-## Funcionalidades a ser implementadas
