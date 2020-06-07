@@ -24,7 +24,7 @@ server.get("/create-point", (req, res) =>{
 
 server.post("/savepoint", (req, res) =>{
 
-    const query =`INSERT INT places (image, name, address, address2, state, city, items) VALUES (?,?,?,?,?,?,?);`
+    const query =`INSERT INTO places (image, name, address, address2, state, city, items) VALUES (?,?,?,?,?,?,?);`
     const values = [
         req.body.image,
         req.body.name,
