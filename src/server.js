@@ -24,7 +24,7 @@ server.get("/create-point", (req, res) =>{
 
 server.post("/savepoint", (req, res) =>{
 
-    const query =`INSERT INTO places (image, name, address, address2, state, city, items) VALUES (?,?,?,?,?,?,?);`
+    const query =`INSERT INT places (image, name, address, address2, state, city, items) VALUES (?,?,?,?,?,?,?);`
     const values = [
         req.body.image,
         req.body.name,
@@ -38,7 +38,7 @@ server.post("/savepoint", (req, res) =>{
     function afterInsertData(err){
         if(err){
             console.log(err)
-            return res.send("point-failed.html")
+            return res.render("create-point.html", {error:true})
         }
  
         return res.render("create-point.html", {saved:true})
